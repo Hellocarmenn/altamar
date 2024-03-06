@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jSignature/2.1.2/jSignature.min.js"></script>
+    <link rel="stylesheet" href="../css/revisionpc.css">
+    <title>Revision Pre Check In</title>
+</head>
+
+<body>
+    <header>
+        <div style="margin-top: 2%;margin-left: 2%;">
+            <img class="logo2" src="../img/logo2.jpeg.jpg">
+            <img class="logo1" src="../img/logo1.jpeg.jpg">
+        </div>
+        <div align="right" style="margin-top: -2%;">
+            <em style="color: gray;justify-content: right;">carmenmtzunam97@gmail.com<span style="color: gray;"
+                    class="glyphicon glyphicon-triangle-bottom"></span></em>
+        </div>
+        <hr>
+        <nav>
+            <strong style="font-size: 15px;margin-left: 5%;margin-top: 5%;color: #8395A3;justify-content: center;">Pre
+                Check In</strong>
+            <div align="right" style="margin-top: -4%;">
+                <span style="color: #076D07;" class="glyphicon glyphicon-print"></span>
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </div>
+            <hr>
+        </nav>
+    </header>
+
+    <main>
+        <div style="margin-top: 6%;">
+            <div class="col-sm-6">
+                <div class="">
+                    <div class="panel-body"><label>Pequeños Sencillos</label> </div>
+                    <diV>
+                        <button class="boton1 col-sm-4">AUTO FAMILIAR <br>[6m]</button>
+                        <button class="boton1 col-sm-4"><br>MOTOCICLETA<br>[AUTO FAMILIAR]<br></button>
+                        <button class="boton1 col-sm-4"><br>BICICLETA<br>[MOTOCICLETA]</button>
+                        <button class="boton1 col-sm-4"><br>RESERVACION AUTO FAMILIAR<br>[6 m]</button>
+                    </diV>
+                </div>
+                <div class="">
+                    <div class="panel-body" style="margin-top: 40%;"><label>Mediano</label> </div>
+                    <diV>
+                        <button class="boton2 col-sm-4">Camioneta uso comercial<br>[1TON-6m]</button>
+                        <button class="boton2 col-sm-4">Vehiculo de Carga<br>[3 TON-65m]</button>
+                        <button class="boton2  col-sm-4">Rabon|Volquete<br>[10TON-9m]</button>
+                        <button class="boton2 col-sm-4">Torton|Tandem|Autobus<br>[15TON-11m]</button>
+                        <button class="boton2 col-sm-4">Trailer Corto|Mudanza <br>[20TON-15]</button>
+                    </diV>
+                </div>
+                <div class="">
+                    <div class="panel-body" style="margin-top: 55%;"><label>Mediano</label> </div>
+                    <diV>
+                        <button class="boton3 col-sm-4">Trailer Caja 40 Pies<br>[30TON-17.5m]</button>
+                        <button class="boton3 col-sm-4">Trailer Caja 45 Pies<br>[35TON-18m]</button>
+                        <button class="boton3 col-sm-4">Trailer Caja 48 Pies <br>[38TON-20m]</button>
+                        <button class="boton3 col-sm-4">Pipa de Gas<br>[40TON-15.5m]</button>
+                        <button class="boton3 col-sm-4">Pipa de combustible <br>[50TON-20M]</button>
+                        <button class="boton3 col-sm-4">Full Doble Semi Remolque <br>[50 TON-25m]</button>
+                        <button class="boton3 col-sm-4">Full Doble Seme Comb <br>[60TON-28m]</button>
+                        <button class="boton3 col-sm-4">Full Extra Largo <br>[50 TON -29m]</button>
+                        <button class="boton3 col-sm-4">Trailer Extra Largo<br>[50TON-25m]</button>
+                    </diV>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="col-sm-6">
+            <div class="panel-body" style="background-color: #F9F9F9; margin-top: 4%;">
+                <label>Detalle de Captura</label>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>PLU</th>
+                                <th>Vehiculo</th>
+                                <th>Cantidad</th>
+                                <th></th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span style="color: red;" class="glyphicon glyphicon-trash	"></span></td>
+                                <td>UCPSIMON</td>
+                                <td>AUTO FAMILIAR<br>Placas:ABC123<br>Pasajero<br>Pasajero niño<br>CONDUCTOR
+                                    INCLUIDO</td>
+                                <td>1<br>1<br>1<br>1<br>1<br></td>
+                                <td><img class="carro" src="../img/carro.jpeg"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <label>Observacion</label>
+                    <br>
+                    <textarea></textarea>
+                    <div class="contBotones">
+                        <button class="btnatras"><span class="glyphicon glyphicon-refresh">Vaciar</span></button>
+                        <button onclick="showAlert()"><span>Generar Pre Check In</span></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <div class="panel-body" style="height: 40%;background-color:white;">
+        </div>
+    </footer>
+
+    <script>
+        const showAlert = () => {
+            Swal.fire({
+                title: "Capture el nombre del cliente",
+                input: "text",
+                width: '80%',
+                grow: 'row',
+                confirmButtonColor: '#103560', // Aquí estableces el color del botón
+                showCancelButton: true,
+                confirmButtonText: "Aplicar y cerrar",
+                showLoaderOnConfirm: true,
+                allowOutsideClick: () => !Swal.isLoading()
+            }).then(() => {
+                showSignatureAlert(); // Llamar a la segunda SweetAlert2 aquí
+            });
+        };
+
+        const showSignatureAlert = () => {
+            // Crear un elemento canvas para la firma
+            const canvas = document.createElement("canvas");
+            canvas.width = 400; // Ancho del canvas
+            canvas.height = 200; // Alto del canvas
+
+            // Mostrar el cuadro de diálogo para la firma
+            Swal.fire({
+                title: "Dibuje su firma",
+                html: canvas, // Agregar el canvas al contenido del cuadro de diálogo
+                width: '80%',
+                grow: 'row',
+                showCancelButton: true,
+                showConfirmButton: true,
+                footer: 'Carmen Martinez',
+                confirmButtonColor: '#103560', // Aquí estableces el color del botón
+                confirmButtonText: "Aplicar y generar PreCheckIn",
+                cancelButtonText: "Limpiar",
+                preConfirm: () => {
+                    // Obtener la imagen de la firma
+                    const signatureData = signature.jSignature("getData", "image");
+                    // Guardar o enviar la firma electrónica
+                    console.log("Firma guardada:", signatureData);
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    hecho(); // Llamar a la función hecho después de confirmar la firma
+                }
+            });
+
+            // Inicializar la firma en el canvas
+            const signature = $(canvas).jSignature();
+        };
+
+        const hecho = () => {
+            // Mostrar la alerta de éxito
+            Swal.fire({
+                icon: "success",
+                title: "El Prechekin se imprimió correctamente",
+                confirmButtonText: "OK",
+                confirmButtonColor: '#103560', // Aquí estableces el color del botón    
+                width: '80%',
+                grow: 'row',
+            });
+        };
+
+        // Llamar a la función para mostrar la primera alerta
+        showAlert();
+
+
+
+    </script>
+</body>
+
+</html>

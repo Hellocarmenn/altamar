@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/agregarinfo.css">
+    <title>Metro</title>
+</head>
+
+<body onClick="window.location.href='revisionpc.html'">>
+    <header>
+        <nav>
+            <div class="panel-body" style="background-color:  #103560;color: white;height: 90px;text-align: center;">
+                <strong>UCPSIM01 AUTO FAMILIAR</strong>
+                <strong><br>AUTO FAMILIAR [6M]</strong>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="col-sm-4" style="margin-top: 5%;margin-left: 1.5%;">
+        
+        </section>
+        <div class="col-sm-12" style="margin-top: 5%;">
+            <div class="col-sm-4">
+            </div>
+
+            <div class="col-sm-4">
+            </div>
+
+            <div class="col-sm-4">
+            </div>
+        </div>
+
+        <div class="col-sm-12" style="margin-top: 5%;">
+            <div class="col-sm-4">
+            </div>
+
+            <div class="col-sm-4">
+                <p>Metros adicionales</p>
+                <div class="wrapper">
+                    <span class="minus">-</span>
+                    <span class="num">01</span>
+                    <span class="plus">+</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="panel-body" style="height: 40%;background-color: #103560;">
+            <div class="contBotones">
+                <button class="btnatras"><span>Atras</span></button>
+                <button><span>Siguiente</span></button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const plus = document.querySelector(".plus"),
+            minus = document.querySelector(".minus"),
+            num = document.querySelector(".num");
+
+        let a = 0;
+
+        plus.addEventListener("click", () => {
+            a++;
+            a = (a < 10) ? "0" + a : a;
+            num.innerText = a;
+        });
+
+        minus.addEventListener("click", () => {
+            if (a > 1) {
+                a--;
+                a = (a < 10) ? "0" + a : a;
+                num.innerText = a;
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

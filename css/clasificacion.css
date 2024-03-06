@@ -1,0 +1,138 @@
+/* Estilos generales */
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    background-size: cover;
+    background-attachment: fixed;
+    height: auto; /* Esto no es necesario, se puede eliminar */
+}
+
+/* Panel principal */
+.panel-body {
+    background-color: #EDF7F4;
+    font-size: 18px;
+    text-align: center;
+    height: 40px;
+    border-radius: 8px;
+    padding: 10px; /* Añadido relleno para mejorar la apariencia */
+    margin-bottom: 20px; /* Añadido margen inferior */
+}
+
+/* Logos */
+.logo1, .logo2 {
+    width: 15%;
+    max-width: 100px; /* Limitado el tamaño máximo */
+}
+
+/* Botones */
+.button {
+    color: black;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 14px; /* Ajustado el tamaño de fuente */
+    padding: 10px 20px; /* Añadido relleno */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+    width: auto; /* Cambiado a auto para que se ajuste al contenido */
+}
+
+.button:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Botones de diferentes estilos */
+.sencillos, .redondos, .reservas {
+    color: white;
+    width: 15%;
+    border-radius: 5px;
+    margin-left: 2%;
+}
+
+.sencillos {
+    background-color: #FEBE56;
+    border-color: #FEBE56;
+}
+
+.redondos {
+    background-color: #7CE07C;
+    border-color: #7CE07C;
+    height: 50px;
+    text-align: center;
+}
+
+.boton1 {
+    background-color: #B6DAF1;
+    color: black;
+    border-radius: 5px;
+    margin-top: 25px;
+    width: auto;
+    height: 60px;
+    font-size: 14px;
+    border-color:#B6DAF1;
+    margin-left: 2%;
+}
+.boton2{
+    background-color:#C8AED1;
+    color: black;
+    border-radius: 5px;
+    margin-top: 25px;
+    width: auto;
+    height: 60px;
+    font-size: 14px;
+    border-color: #C8AED1;
+    margin-left: 2%;
+
+    
+
+}
+
+.boton3{
+    background-color:#FCDBAB;
+    color: black;
+    border-radius: 5px;
+    margin-top: 25px;
+    width: auto;
+    height: 60px;
+    font-size: 14px;
+    border-color:#FCDBAB;
+    margin-left: 2%;
+
+
+}
+
+
+
+.reservas {
+    background-color: #E77D7D;
+    border-color: #E77D7D;
+}
+
+/* Ajuste de tamaños y estilos para diferentes tamaños de pantalla */
+@media only screen and (max-width: 600px) {
+    .panel-body {
+        font-size: 16px; /* Reducido el tamaño de fuente para pantallas pequeñas */
+    }
+
+    .button {
+        padding: 8px 16px; /* Reducido el relleno de los botones para pantallas pequeñas */
+    }
+
+    .logo1, .logo2 {
+        width: 100px; /* Ajustado el tamaño de los logos para pantallas pequeñas */
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .button {
+        font-size: 12px; /* Reducido el tamaño de fuente para pantallas muy pequeñas */
+    }
+}

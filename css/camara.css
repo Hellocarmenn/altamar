@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+
+
+    display: grid;
+    grid-template-areas: "head head"
+        "main main"
+        "foot foot";
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 90px 500px 200px;
+
+    & header {
+        grid-area: head;
+    }
+
+    & main {
+        grid-area: main;
+        background: white;
+    }
+
+    & footer {
+        grid-area: foot;
+    }
+}
+
+
+.panel-body {
+    background-color: #EDF7F4;
+    font-size: 18px;
+    text-align: center;
+    height: 40px;
+    border-radius: 8px;
+}
+.logo1,.logo2{
+    width: 15%;
+}
+
+.camara{
+    width: 100%;
+}
+
+.contBotones{
+    display: flex;
+    justify-content: center;
+  }
+
+  .btnatras{
+    margin-right: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+
+  }
+
+  .btnatras span {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 18px 25px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    z-index: 20;
+    transition: all 0.3s ease-in-out;
+    background: red;
+  }
+  
+
+
+button {
+    justify-content: flex-end;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+  }
+    button span {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 18px 25px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    z-index: 20;
+    transition: all 0.3s ease-in-out;
+    background: #28BA6E;
+
+  }
+
+ 
+  
+  
+ 
+  
+/*MediaQ*/
+
+
+@media(max-width:480px) {}
+
+
+
+@media screen and (min-width:768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        flex: 1;
+
+    }
+    main {
+        flex: 1;
+    }
+
+    footer {
+        margin-top: auto;
+    }
+
+
+}

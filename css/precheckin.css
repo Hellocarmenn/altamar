@@ -1,0 +1,130 @@
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.panel-body {
+    background-color: #EDF7F4;
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.logo1, .logo2 {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.button {
+    color: black;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.sencillos, .redondos, .reservas {
+    color: white;
+    width: 15%;
+    border-radius: 5px;
+    margin-left: 2%;
+}
+
+.sencillos {
+    background-color: #FEBE56;
+    border-color: #FEBE56;
+}
+
+.redondos {
+    background-color: #7CE07C;
+    border-color: #7CE07C;
+    height: 50px;
+    text-align: center;
+}
+
+.reservas {
+    background-color: #E77D7D;
+    border-color: #E77D7D;
+}
+
+.boton1 {
+    background-color: #B6DAF1;
+    color: black;
+    border-radius: 5px;
+    margin-top: 25px;
+    width: auto;
+    height: 70px;
+    font-size: 12px;
+    border-color: #B6DAF1;
+    margin-left: 2%;
+}
+
+.boton2 {
+    background-color: #C8AED1;
+    color: black;
+    border-radius: 5px;
+    margin-top: 25px;
+    width: auto;
+    height: 60px;
+    font-size: 14px;
+    border-color: #C8AED1;
+    margin-left: 2%;
+}
+
+.boton3 {
+    background-color: #FCDBAB;
+    color: black;
+    border-radius: 5px;
+    margin-top: 25px;
+    width: 20%;
+    height: 60px;
+    font-size: 14px;
+    border-color: #FCDBAB;
+    margin-left: 2%;
+}
+
+/* Ajuste de tamaños y estilos para diferentes tamaños de pantalla */
+@media only screen and (max-width: 600px) {
+    .panel-body {
+        font-size: 0.8rem;
+    }
+
+    .button {
+        padding: 8px 16px;
+    }
+
+    .logo1, .logo2 {
+        width: 60px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .button {
+        font-size: 0.9rem;
+    }
+}
