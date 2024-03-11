@@ -143,9 +143,6 @@
             canvas.width = 400; // Ancho del canvas
             canvas.height = 200; // Alto del canvas
 
-            // Inicializar la firma en el canvas
-            const signature = $(canvas).jSignature();
-
             // Mostrar el cuadro de diálogo para la firma
             Swal.fire({
                 title: "Dibuje su firma",
@@ -159,6 +156,9 @@
                 confirmButtonText: "Aplicar y generar PreCheckIn",
                 cancelButtonText: "Limpiar",
                 preConfirm: () => {
+                    // Inicializar la firma en el canvas
+                    const signature = $(canvas).jSignature();
+
                     // Obtener la imagen de la firma
                     const signatureData = signature.jSignature("getData", "image");
                     // Guardar o enviar la firma electrónica
@@ -170,6 +170,8 @@
                 }
             });
         };
+
+
 
 
         const hecho = () => {
@@ -186,8 +188,6 @@
 
         // Llamar a la función para mostrar la primera alerta
         showAlert();
-
-
 
     </script>
 </body>
