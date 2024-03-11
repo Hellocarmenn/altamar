@@ -143,6 +143,9 @@
             canvas.width = 400; // Ancho del canvas
             canvas.height = 200; // Alto del canvas
 
+            // Inicializar la firma en el canvas
+            const signature = $(canvas).jSignature();
+
             // Mostrar el cuadro de diálogo para la firma
             Swal.fire({
                 title: "Dibuje su firma",
@@ -166,10 +169,8 @@
                     hecho(); // Llamar a la función hecho después de confirmar la firma
                 }
             });
-
-            // Inicializar la firma en el canvas
-            const signature = $(canvas).jSignature();
         };
+
 
         const hecho = () => {
             // Mostrar la alerta de éxito
