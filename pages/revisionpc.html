@@ -121,6 +121,14 @@
     </footer>
 
     <script>
+
+        const initializeSignature = () => {
+            // Obtener el canvas
+            const canvas = document.getElementById("signatureCanvas");
+
+            // Inicializar jSignature
+            $(canvas).jSignature();
+        };
         const showAlert = () => {
             Swal.fire({
                 title: "Capture el nombre del cliente",
@@ -186,8 +194,12 @@
             });
         };
 
-        // Llamar a la función para mostrar la primera alerta
-        showAlert();
+       // Llamar a la función showAlert después de que el documento esté completamente cargado
+       $(document).ready(() => {
+            showAlert();
+            initializeSignature(); // Inicializar jSignature
+        });
+
 
     </script>
 </body>
