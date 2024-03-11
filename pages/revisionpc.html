@@ -148,6 +148,7 @@
         const showSignatureAlert = () => {
             // Crear un elemento canvas para la firma
             const canvas = document.createElement("canvas");
+            canvas.id = "signatureCanvas"; // Agregar el atributo id
             canvas.width = 400; // Ancho del canvas
             canvas.height = 200; // Alto del canvas
 
