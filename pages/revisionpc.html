@@ -9,6 +9,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jSignature/2.1.2/jSignature.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jSignature/2.1.3/jSignature.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <link rel="stylesheet" href="../css/revisionpc.css">
     <title>Revision Pre Check In</title>
 </head>
@@ -119,15 +123,23 @@
         </div>
     </footer>
 
+   
     <script>
+        let signature;
 
         const initializeSignature = () => {
             // Obtener el canvas
             const canvas = document.getElementById("signatureCanvas");
 
             // Inicializar jSignature
-            $(canvas).jSignature();
+            signature = $(canvas).jSignature();
         };
+
+        const limpiarFirma = () => {
+            // Limpiar la firma
+            signature.jSignature("reset");
+        };
+
         const showAlert = () => {
             Swal.fire({
                 title: "Capture el nombre del cliente",
@@ -164,22 +176,22 @@
                 confirmButtonText: "Aplicar y generar PreCheckIn",
                 cancelButtonText: "Limpiar",
                 preConfirm: () => {
-                    // Inicializar la firma en el canvas
-                    const signature = $(canvas).jSignature();
+                    return new Promise((resolve) => {
+                        // Obtener la imagen de la firma
+                        const signatureData = signature.jSignature("getData", "image");
+                        // Guardar o enviar la firma electrónica
+                        console.log("Firma guardada:", signatureData);
 
-                    // Obtener la imagen de la firma
-                    const signatureData = signature.jSignature("getData", "image");
-                    // Guardar o enviar la firma electrónica
-                    console.log("Firma guardada:", signatureData);
-                }
+                        resolve();
+                    });
+                },
+                showLoaderOnConfirm: true // Mostrar el indicador de carga durante la ejecución de preConfirm
             }).then((result) => {
                 if (result.isConfirmed) {
                     hecho(); // Llamar a la función hecho después de confirmar la firma
                 }
             });
         };
-
-
 
 
         const hecho = () => {
@@ -194,14 +206,14 @@
             });
         };
 
-       // Llamar a la función showAlert después de que el documento esté completamente cargado
-       $(document).ready(() => {
+        // Llamar a la función showAlert después de que el documento esté completamente cargado
+        $(document).ready(() => {
             showAlert();
             initializeSignature(); // Inicializar jSignature
         });
-
-
     </script>
+
+
 </body>
 
 </html>
